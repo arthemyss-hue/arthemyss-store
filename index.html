@@ -1,0 +1,296 @@
+html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Descubre tenis, relojes, camisas, perfumería y combos en ARthemyss.">
+  <title>ARthemyss | Estilo que te representa</title>
+
+  <style>
+    :root {
+      --fondo: #101010;
+      --tarjeta: #1c1c1c;
+      --dorado: #c9a45c;
+      --blanco: #f5f2eb;
+      --gris: #b7b7b7;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--fondo);
+      color: var(--blanco);
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 28px 16px;
+      border-bottom: 1px solid #393126;
+    }
+
+    .logo {
+      color: var(--dorado);
+      font-size: clamp(30px, 7vw, 44px);
+      letter-spacing: 5px;
+      font-weight: bold;
+    }
+
+    .eslogan {
+      color: var(--gris);
+      letter-spacing: 3px;
+      font-size: 11px;
+      margin-top: 5px;
+    }
+
+    .presentacion {
+      padding: 55px 20px;
+      text-align: center;
+      background: linear-gradient(145deg, #222016, #101010 70%);
+    }
+
+    .presentacion h1 {
+      font-size: clamp(28px, 6vw, 44px);
+      margin-bottom: 12px;
+    }
+
+    .presentacion h1 span {
+      color: var(--dorado);
+    }
+
+    .presentacion p {
+      color: var(--gris);
+      max-width: 480px;
+      margin: 0 auto 25px;
+    }
+
+    .boton {
+      display: inline-block;
+      padding: 12px 22px;
+      background: var(--dorado);
+      color: #111;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    nav {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding: 16px;
+      justify-content: center;
+      border-bottom: 1px solid #292929;
+    }
+
+    nav a {
+      color: var(--blanco);
+      text-decoration: none;
+      white-space: nowrap;
+      padding: 8px 12px;
+      border: 1px solid #3a3a3a;
+      border-radius: 4px;
+      font-size: 13px;
+    }
+
+    nav a:hover {
+      border-color: var(--dorado);
+      color: var(--dorado);
+    }
+
+    .seccion {
+      padding: 35px 18px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .titulo-seccion {
+      color: var(--dorado);
+      font-size: 23px;
+      margin-bottom: 8px;
+    }
+
+    .descripcion {
+      color: var(--gris);
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+      gap: 15px;
+    }
+
+    .producto {
+      background: var(--tarjeta);
+      border: 1px solid #303030;
+      border-radius: 7px;
+      overflow: hidden;
+    }
+
+    .producto img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+      background: #292929;
+    }
+
+    .producto-info {
+      padding: 13px;
+    }
+
+    .producto h3 {
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+
+    .producto p {
+      color: var(--gris);
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+
+    .precio {
+      color: var(--dorado);
+      font-weight: bold;
+      font-size: 17px;
+      margin-bottom: 12px;
+    }
+
+    .comprar {
+      display: block;
+      text-align: center;
+      padding: 9px 5px;
+      background: #252b25;
+      border: 1px solid #52664f;
+      color: #d9f0d4;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .etiqueta {
+      color: var(--dorado);
+      font-size: 10px;
+      letter-spacing: 1px;
+      margin-bottom: 5px;
+    }
+
+    .aviso {
+      background: #1c1c1c;
+      border: 1px dashed #55472e;
+      color: var(--gris);
+      padding: 20px;
+      text-align: center;
+      border-radius: 6px;
+      font-size: 13px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 16px;
+      border-top: 1px solid #393126;
+      color: var(--gris);
+      font-size: 12px;
+    }
+
+    footer strong {
+      color: var(--dorado);
+    }
+
+    @media (max-width: 500px) {
+      nav {
+        justify-content: flex-start;
+      }
+
+      .seccion {
+        padding: 28px 13px;
+      }
+
+      .productos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">ARthemyss</div>
+    <div class="eslogan">ESTILO · CALIDAD · ACTITUD</div>
+  </header>
+
+  <section class="presentacion">
+    <h1>Tu estilo.<br><span>Tus reglas.</span></h1>
+    <p>Descubre nuevos modelos, encuentra tu próximo favorito y elige el estilo que te representa.</p>
+    <a class="boton" href="#novedades">DESCUBRIR COLECCIÓN</a>
+  </section>
+
+  <nav>
+    <a href="#novedades">Novedades</a>
+    <a href="#tenis">Tenis</a>
+    <a href="#relojes">Relojes</a>
+    <a href="#camisas">Camisas</a>
+    <a href="#perfumeria">Perfumería</a>
+    <a href="#combos">Combos</a>
+  </nav>
+
+  <main>
+
+    <section class="seccion" id="novedades">
+      <h2 class="titulo-seccion">Novedades</h2>
+      <p class="descripcion">Lo nuevo de ARthemyss.</p>
+      <div class="aviso">Próximamente encontrarás aquí los modelos recién llegados.</div>
+    </section>
+
+    <section class="seccion" id="tenis">
+      <h2 class="titulo-seccion">Tenis</h2>
+      <p class="descripcion">Encuentra tu próximo par favorito.</p>
+      <div class="aviso">Estamos preparando nuestra colección de tenis.</div>
+    </section>
+
+    <section class="seccion" id="relojes">
+      <h2 class="titulo-seccion">Relojes</h2>
+      <p class="descripcion">Detalles que completan tu estilo.</p>
+      <div class="aviso">Próximamente: modelos y precios disponibles.</div>
+    </section>
+
+    <section class="seccion" id="camisas">
+      <h2 class="titulo-seccion">Camisas</h2>
+      <p class="descripcion">Prendas para expresar tu personalidad.</p>
+      <div class="aviso">Estamos preparando nuestra colección de camisas.</div>
+    </section>
+
+    <section class="seccion" id="perfumeria">
+      <h2 class="titulo-seccion">Perfumería</h2>
+      <p class="descripcion">Aromas para dejar huella.</p>
+      <div class="aviso">Próximamente: fragancias disponibles.</div>
+    </section>
+
+    <section class="seccion" id="combos">
+      <h2 class="titulo-seccion">Combos y ofertas</h2>
+      <p class="descripcion">Combina tus favoritos y descubre nuestras promociones.</p>
+      <div class="aviso">Pronto encontrarás aquí nuestros combos especiales.</div>
+    </section>
+
+  </main>
+
+  <footer>
+    <strong>ARthemyss</strong>
+    <p>Estilo · Calidad · Actitud</p>
+    <p>Consulta la disponibilidad antes de realizar tu pedido.</p>
+  </footer>
+
+</body>
+</html>
