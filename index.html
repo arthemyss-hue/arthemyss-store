@@ -252,13 +252,82 @@ html
       <h2 class="titulo-seccion">Novedades</h2>
       <p class="descripcion">Lo nuevo de ARthemyss.</p>
       <div class="aviso">Próximamente encontrarás aquí los modelos recién llegados.</div>
-    </section>
+<section class="seccion" id="tenis">
+  
+  <section class="seccion" id="tenis">
+  <h2 class="titulo-seccion">Tenis</h2>
+  <p class="descripcion">Encuentra tu próximo par favorito.</p>
 
-    <section class="seccion" id="tenis">
-      <h2 class="titulo-seccion">Tenis</h2>
-      <p class="descripcion">Encuentra tu próximo par favorito.</p>
-      <div class="aviso">Estamos preparando nuestra colección de tenis.</div>
-    </section>
+  <div class="productos">
+
+```
+<article class="producto">
+  <img
+    src="26386489-efdb-4f62-bdb6-8187ce398e23.jpeg"
+    alt="Tenis New Balance"
+    style="width:100%;border-radius:10px;"
+  >
+
+  <h3>New Balance</h3>
+  <p class="precio">$140.000 COP</p>
+
+  <label for="talla-newbalance">Selecciona tu talla:</label>
+
+  <select id="talla-newbalance">
+    <option value="">Elegir talla</option>
+    <option value="36">36</option>
+    <option value="37">37</option>
+    <option value="38">38</option>
+    <option value="39">39</option>
+    <option value="40">40</option>
+    <option value="41">41</option>
+    <option value="42">42</option>
+    <option value="43">43</option>
+    <option value="44">44</option>
+  </select>
+
+  <a
+    href="#"
+    onclick="comprarTenis(event)"
+    data-modelo="New Balance"
+    data-talla="talla-newbalance"
+    class="boton-comprar"
+  >
+    Comprar por WhatsApp
+  </a>
+</article>
+```
+
+  </div>
+</section>
+
+<script>
+function comprarTenis(event) {
+  event.preventDefault();
+
+  const boton = event.currentTarget;
+  const modelo = boton.dataset.modelo;
+  const selector = document.getElementById(boton.dataset.talla);
+  const talla = selector.value;
+
+  if (!talla) {
+    alert("Por favor, selecciona tu talla.");
+    return;
+  }
+
+  const mensaje =
+    `Hola, quiero comprar los tenis ${modelo}, talla ${talla}, por $140.000 COP.`;
+
+  const url =
+    "https://wa.me/573209148855?text=" +
+    encodeURIComponent(mensaje);
+
+  window.open(url, "_blank");
+}
+</script>
+
+
+
 
     <section class="seccion" id="relojes">
       <h2 class="titulo-seccion">Relojes</h2>
