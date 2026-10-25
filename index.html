@@ -520,11 +520,99 @@ function comprarTenis(numero) {
 
 
 
-    <section class="seccion" id="relojes">
-      <h2 class="titulo-seccion">Relojes</h2>
-      <p class="descripcion">Detalles que completan tu estilo.</p>
-      <div class="aviso">Próximamente: modelos y precios disponibles.</div>
-    </section>
+html
+<section class="seccion" id="relojes">
+  <h2 class="titulo-seccion">RELOJES ARTHEMYSS</h2>
+  <p class="descripcion-seccion">
+    Elegancia, estilo y personalidad en cada detalle.
+  </p>
+
+  <div class="productos">
+
+    <!-- RELOJ 1 -->
+    <article class="producto">
+      <img src="5406D028-2E20-474F-9395-2089FD4B420D.jpeg"
+           alt="Reloj estilo Rolex negro">
+      <h3>Rolex Azul</h3>
+      <p class="precio">$120.000 COP</p>
+      <button onclick="pedirReloj(1)">Pedir por WhatsApp</button>
+    </article>
+
+    <!-- RELOJ 2 -->
+    <article class="producto">
+      <img src="8CC10F50-D74E-4A74-85B0-D4A257CEBB32.jpeg"
+           alt="Reloj estilo Rolex azul">
+      <h3>Rolex Negro</h3>
+      <p class="precio">$120.000 COP</p>
+      <button onclick="pedirReloj(2)">Pedir por WhatsApp</button>
+    </article>
+
+    <!-- RELOJ 3 -->
+    <article class="producto">
+      <img src="1E1CB73B-D96A-4765-B343-4D8E074BB41E.jpeg"
+           alt="Reloj Curren">
+      <h3>Curren</h3>
+      <p class="precio">$160.000 COP</p>
+      <button onclick="pedirReloj(3)">Pedir por WhatsApp</button>
+    </article>
+
+    <!-- RELOJ 4 -->
+    <article class="producto">
+      <img src="5F5AF6AB-555D-4655-B821-D9025C235FBF.jpeg"
+           alt="Reloj estilo Omega">
+      <h3>Omega</h3>
+      <p class="precio">$120.000 COP</p>
+      <button onclick="pedirReloj(4)">Pedir por WhatsApp</button>
+    </article>
+
+    <!-- RELOJ 5 -->
+    <article class="producto">
+      <img src="C82C67D4-BC20-4123-B9AD-30D1C963E424.jpeg"
+           alt="Reloj estilo Cartier cuero">
+      <h3>Cartier Dorado</h3>
+      <p class="precio">$120.000 COP</p>
+      <button onclick="pedirReloj(5)">Pedir por WhatsApp</button>
+    </article>
+
+    <!-- RELOJ 6 -->
+    <article class="producto">
+      <img src="7276B88A-774C-4EE8-BB7B-50FA94C21654.jpeg"
+           alt="Reloj estilo Cartier dorado">
+      <h3>Cartier Plateado</h3>
+      <p class="precio">$120.000 COP</p>
+      <button onclick="pedirReloj(6)">Pedir por WhatsApp</button>
+    </article>
+
+  </div>
+</section>
+
+<script>
+function pedirReloj(numero) {
+  const relojes = {
+    1: { nombre: "Rolex negro", precio: 120000 },
+    2: { nombre: "Rolex azul", precio: 120000 },
+    3: { nombre: "Curren", precio: 160000 },
+    4: { nombre: "Omega", precio: 120000 },
+    5: { nombre: "Cartier cuero", precio: 120000 },
+    6: { nombre: "Cartier dorado ", precio: 120000 }
+  };
+
+  const reloj = relojes[numero];
+
+  const mensaje =
+    "Hola, estoy interesado en el reloj " +
+    reloj.nombre +
+    " de ARthemyss, con precio de $" +
+    reloj.precio.toLocaleString("es-CO") +
+    " COP. ¿Está disponible?";
+
+  const url =
+    "https://wa.me/573209148855?text=" +
+    encodeURIComponent(mensaje);
+
+  window.open(url, "_blank");
+}
+</script>
 
 
     <section class="seccion" id="combos">
