@@ -517,6 +517,178 @@ function comprarTenis(numero) {
 }
 </script>
 
+<!-- NEW BALANCE 740 - MODELO 1 -->
+
+<article class="producto">
+
+  <img src="IMG_9650.jpeg" alt="New Balance 740 Modelo 1" style="width:100%;border-radius:10px;">
+
+  <h3>New Balance 740</h3>
+
+  <p class="precio">$130.000 COP</p>
+
+  <label for="talla-13">Selecciona tu talla:</label>
+
+  <select id="talla-13">
+
+    <option value="">Elegir talla</option>
+
+    <option>36</option>
+
+    <option>37</option>
+
+    <option>38</option>
+
+    <option>39</option>
+
+    <option>40</option>
+
+    <option>41</option>
+
+    <option>42</option>
+
+    <option>43</option>
+
+    <option>44</option>
+
+  </select>
+
+  <button class="boton-comprar" onclick="comprarNewBalance740(13, 'Modelo 1')">
+
+    Comprar por WhatsApp
+
+  </button>
+
+</article>
+
+<!-- NEW BALANCE 740 - MODELO 2 -->
+
+<article class="producto">
+
+  <img src="IMG_9651.jpeg" alt="New Balance 740 Modelo 2" style="width:100%;border-radius:10px;">
+
+  <h3>New Balance 740</h3>
+
+  <p class="precio">$130.000 COP</p>
+
+  <label for="talla-14">Selecciona tu talla:</label>
+
+  <select id="talla-14">
+
+    <option value="">Elegir talla</option>
+
+    <option>36</option>
+
+    <option>37</option>
+
+    <option>38</option>
+
+    <option>39</option>
+
+    <option>40</option>
+
+    <option>41</option>
+
+    <option>42</option>
+
+    <option>43</option>
+
+    <option>44</option>
+
+  </select>
+
+  <button class="boton-comprar" onclick="comprarNewBalance740(14, 'Modelo 2')">
+
+    Comprar por WhatsApp
+
+  </button>
+
+</article>
+
+<!-- NEW BALANCE 740 - MODELO 3 -->
+
+<article class="producto">
+
+  <img src="IMG_9652.png" alt="New Balance 740 Modelo 3" style="width:100%;border-radius:10px;">
+
+  <h3>New Balance 740</h3>
+
+  <p class="precio">$130.000 COP</p>
+
+  <label for="talla-15">Selecciona tu talla:</label>
+
+  <select id="talla-15">
+
+    <option value="">Elegir talla</option>
+
+    <option>36</option>
+
+    <option>37</option>
+
+    <option>38</option>
+
+    <option>39</option>
+
+    <option>40</option>
+
+    <option>41</option>
+
+    <option>42</option>
+
+    <option>43</option>
+
+    <option>44</option>
+
+  </select>
+
+  <button class="boton-comprar" onclick="comprarNewBalance740(15, 'Modelo 3')">
+
+    Comprar por WhatsApp
+
+  </button>
+
+</article>
+
+<script>
+
+function comprarNewBalance740(numero, modelo) {
+
+  const selector = document.getElementById("talla-" + numero);
+
+  const talla = selector.value;
+
+  if (!talla) {
+
+    alert("Por favor, selecciona tu talla.");
+
+    return;
+
+  }
+
+  const mensaje =
+
+    "Hola, quiero consultar la disponibilidad de los New Balance 740 " +
+
+    modelo +
+
+    ", talla " +
+
+    talla +
+
+    ", precio $130.000 COP.";
+
+  const url =
+
+    "https://wa.me/573209148855?text=" +
+
+    encodeURIComponent(mensaje);
+
+  window.open(url, "_blank");
+
+}
+
+</script>
+
 
 
 
